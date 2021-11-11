@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/error', function () {
+    return response('hola', '404')->red;
+});
+
+Route::get('/prueba', function () {
+    return view('prueba', [
+        'titulo' => 'El diablo sobre ruedas'
+    ]);
+});
