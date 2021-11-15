@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Depart;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-
 
 Route::get('/error', function () {
     return response('hola', '404')->red;
@@ -32,6 +32,4 @@ Route::get('/depart', function () {
     return view('depart.index');
 });
 
-Route::get('/depart/create', function () {
-    return view('depart.create');
-});
+Route::get('/depart/create', [Depart::class, 'create']);
