@@ -27,3 +27,11 @@ Route::get('/prueba', function () {
         'titulo' => 'El diablo sobre ruedas'
     ]);
 });
+
+Route::get('/depart', function () {
+    return view('depart.index');
+});
+
+Route::get('/depart/create', function () {
+    return view('depart.create');
+});
