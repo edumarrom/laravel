@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Depart;
+use App\Http\Controllers\DepartController;
+use App\Http\Controllers\EmpleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +30,8 @@ Route::get('/prueba', function () {
     ]);
 });
 
-Route::get('/depart', function () {
-    return view('depart.index');
-});
+Route::get('/depart', [DepartController::class, 'index']);
 
-Route::get('/depart/create', [Depart::class, 'create']);
+Route::get('/emple', [EmpleController::class, 'index']);
+
+Route::get('/depart/create', [DepartController::class, 'create']);
