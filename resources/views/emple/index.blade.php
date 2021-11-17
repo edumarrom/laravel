@@ -38,12 +38,12 @@
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="text-sm text-gray-900">
-                                        {{$emples->fecha_alt}}
+                                        {{$emples->fecha_alt}} {{-- TODO:  Poner la fecha bonita --}}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="text-sm text-gray-900">
-                                        {{$emples->salario}}
+                                        {{number_format($emples->salario, 2, ',', ' ') . '€'}}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
